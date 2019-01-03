@@ -37,14 +37,22 @@ public class Main {
 
         int number = 4;
         int finishNumber = 20;
+        int countEven = 0;
 
         while(number <= finishNumber) {
             number++;
+
             if(!isEvenNumber(number)) {
                 continue;
             }
 
             System.out.println("Even number " + number);
+            countEven++;
+
+            if(countEven == 5) {
+                System.out.println("Exiting for loop");
+                break;
+            }
         }
 
     }
